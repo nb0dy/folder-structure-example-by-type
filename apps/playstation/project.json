@@ -15,10 +15,7 @@
         "baseHref": "/",
         "main": "apps/playstation/src/main.tsx",
         "tsConfig": "apps/playstation/tsconfig.app.json",
-        "assets": [
-          "apps/playstation/src/favicon.ico",
-          "apps/playstation/src/assets"
-        ],
+        "assets": ["apps/playstation/src/favicon.ico", "apps/playstation/src/assets"],
         "styles": [],
         "scripts": [],
         "isolatedConfig": true,
@@ -86,5 +83,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["type:app"]
 }

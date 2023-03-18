@@ -1,7 +1,7 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
+  "plugins": ["@nrwl/nx", "simple-import-sort"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -13,12 +13,41 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "type:asset",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "type:const",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "type:utils",
+                "onlyDependOnLibsWithTags": ["type:const"]
+              },
+              {
+                "sourceTag": "type:service",
+                "onlyDependOnLibsWithTags": ["type:utils", "type:const"]
+              },
+              {
+                "sourceTag": "type:component",
+                "onlyDependOnLibsWithTags": ["type:utils", "type:const", "type:asset"]
+              },
+              {
+                "sourceTag": "type:container",
+                "onlyDependOnLibsWithTags": ["type:utils", "type:const", "type:asset", "type:component", "type:service"]
+              },
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["type:utils", "type:const", "type:component", "type:container"]
               }
             ]
           }
-        ]
+        ],
+        "simple-import-sort/imports": "error"
       }
     },
     {

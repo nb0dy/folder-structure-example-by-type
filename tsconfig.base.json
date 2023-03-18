@@ -14,7 +14,24 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@folder-structure-example-by-type/assets/icons": ["libs/assets/icons/src/index.ts"],
+      "@folder-structure-example-by-type/components/button": ["libs/components/button/src/index.ts"],
+      "@folder-structure-example-by-type/components/link": ["libs/components/link/src/index.ts"],
+      "@folder-structure-example-by-type/consts/routes": ["libs/consts/routes/src/index.ts"],
+      "@folder-structure-example-by-type/containers/app-details": ["libs/containers/app-details/src/index.ts"],
+      "@folder-structure-example-by-type/containers/dashboard": ["libs/containers/dashboard/src/index.ts"],
+      "@folder-structure-example-by-type/containers/quick-menu-drawer": [
+        "libs/containers/quick-menu-drawer/src/index.ts"
+      ],
+      "@folder-structure-example-by-type/containers/settings-details": [
+        "libs/containers/settings-details/src/index.ts"
+      ],
+      "@folder-structure-example-by-type/containers/settings-list": ["libs/containers/settings-list/src/index.ts"],
+      "@folder-structure-example-by-type/services/app": ["libs/services/app/src/index.ts"],
+      "@folder-structure-example-by-type/services/settings": ["libs/services/settings/src/index.ts"],
+      "@folder-structure-example-by-type/utils/auth": ["libs/utils/auth/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
